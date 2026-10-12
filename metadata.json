@@ -1,0 +1,7 @@
+{
+  "name": "LexIntent - Decentralized Arbitration Protocol",
+  "description": "High-stakes decentralized arbitration and juror deliberation protocol anchored on Solana. Code enforces. Humans judge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

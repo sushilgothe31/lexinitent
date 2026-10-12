@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>LexIntent - Decentralized Arbitration Protocol</title>
+    <meta name="description" content="High-stakes decentralized arbitration and juror deliberation protocol anchored on Solana. Code enforces. Humans judge." />
+    <meta property="og:title" content="LexIntent - Decentralized Arbitration Protocol" />
+    <meta property="og:description" content="High-stakes decentralized arbitration and juror deliberation protocol anchored on Solana. Code enforces. Humans judge." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function() {
+        // Fix for extensions/interceptors that assign window.fetch when it has only a getter
+        try {
+          var origFetch = window.fetch ? window.fetch.bind(window) : undefined;
+          var activeFetch = origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return activeFetch || origFetch;
+            },
+            set: function(fn) {
+              activeFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          try {
+            var origProto = Window.prototype.fetch;
+            var activeProto = origProto;
+            Object.defineProperty(Window.prototype, 'fetch', {
+              get: function() {
+                return activeProto || origProto;
+              },
+              set: function(fn) {
+                activeProto = fn;
+              },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e2) {}
+        }
+
+        // Prevent extension interceptor error from propagating
+        window.addEventListener('error', function(event) {
+          if (event && event.message && event.message.indexOf('fetch') !== -1 && event.message.indexOf('getter') !== -1) {
+            if (event.preventDefault) event.preventDefault();
+            if (event.stopPropagation) event.stopPropagation();
+            if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  </head>
+  <body class="bg-[#10131d] text-[#e0e1f1] antialiased selection:bg-[#8a42f5] selection:text-[#faf0ff]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
